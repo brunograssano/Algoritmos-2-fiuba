@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include "lista.h"
-const int EXITO=0,ERROR=-1,NO_EXISTE=0;
+const int EXITO_L=0,ERROR_L=-1,NO_EXISTE_L=0;
 
 typedef struct nodo {
 	void* elemento;
@@ -40,12 +40,12 @@ lista_t* lista_crear(){
  */
 int lista_insertar(lista_t* lista, void* elemento){
 	if(lista==NULL){
-		return ERROR;
+		return ERROR_L;
 	}
 
 	nodo_t* nodo=malloc(sizeof(nodo_t));
 	if(nodo==NULL){
-		return ERROR;
+		return ERROR_L;
 	}
 
 	nodo->siguiente=NULL;
@@ -62,7 +62,7 @@ int lista_insertar(lista_t* lista, void* elemento){
 	(lista->cantidad)++;
 	nodo->elemento=elemento;
 
-	return EXITO;
+	return EXITO_L;
 }
 
 /* Mueve un axiliar hasta la posicion anterior del lugar en que se quiere insertar en la lista.
@@ -78,13 +78,13 @@ void ir_hasta_posicion_anterior(nodo_t** aux,size_t posicion){
 
 /*
  * Inserta un elemento en la posicion indicada, donde 0 es insertar
- * como primer elemento y 1 es insertar luego del primer elemento.  
+ * como primer elemento y 1 es insertar luego del primer elemento.
  * En caso de no existir la posicion indicada, lo inserta al final.
  * Devuelve 0 si pudo insertar o -1 si no pudo.
  */
 int lista_insertar_en_posicion(lista_t* lista, void* elemento, size_t posicion){
 	if(lista==NULL){
-		return ERROR;
+		return ERROR_L;
 	}
 	if(lista->cantidad<posicion || lista->cantidad==0){
 		return lista_insertar(lista,elemento);
@@ -92,7 +92,7 @@ int lista_insertar_en_posicion(lista_t* lista, void* elemento, size_t posicion){
 
 	nodo_t* nodo=malloc(sizeof(nodo_t));
 	if(nodo==NULL){
-		return ERROR;
+		return ERROR_L;
 	}
 
 	if(posicion==0){
@@ -108,7 +108,7 @@ int lista_insertar_en_posicion(lista_t* lista, void* elemento, size_t posicion){
 
 	(lista->cantidad)++;
 	nodo->elemento=elemento;
-	return EXITO;
+	return EXITO_L;
 }
 
 /*
@@ -117,11 +117,11 @@ int lista_insertar_en_posicion(lista_t* lista, void* elemento, size_t posicion){
  */
 int lista_borrar(lista_t* lista){
 	if(lista==NULL){
-		return ERROR;
+		return ERROR_L;
 	}
 
 	if(lista->cantidad==0 || lista->nodo_primero==NULL){
-		return ERROR;
+		return ERROR_L;
 	}
 	else if(lista->cantidad==1){
 		free(lista->nodo_primero);
@@ -137,21 +137,21 @@ int lista_borrar(lista_t* lista){
 	}
 	(lista->cantidad)--;
 
-	return EXITO;
+	return EXITO_L;
 }
 
 /*
  * Quita de la lista el elemento que se encuentra en la posición
- * indicada, donde 0 es el primer elemento.  
+ * indicada, donde 0 es el primer elemento.
  * En caso de no existir esa posición se intentará borrar el último
- * elemento.  
+ * elemento.
  * Devuelve 0 si pudo eliminar o -1 si no pudo.
  */
 int lista_borrar_de_posicion(lista_t* lista, size_t posicion){
 	if(lista==NULL){
-		return ERROR;
+		return ERROR_L;
 	}
-	if(lista->cantidad<=posicion || lista->cantidad<=1){
+	if((lista->cantidad-1)<=posicion || lista->cantidad<=1){
 		return lista_borrar(lista);
 	}
 
@@ -170,7 +170,7 @@ int lista_borrar_de_posicion(lista_t* lista, size_t posicion){
 	}
 
 	(lista->cantidad)--;
-	return EXITO;
+	return EXITO_L;
 }
 
 /*
@@ -190,13 +190,13 @@ void* lista_elemento_en_posicion(lista_t* lista, size_t posicion){
 	if(posicion==0){
 		return lista->nodo_primero->elemento;
 	}
-	
+
 	nodo_t* iterador=lista->nodo_primero;
 	ir_hasta_posicion_anterior(&iterador,posicion+1);
 	return iterador->elemento;
 }
 
-/* 
+/*
  * Devuelve el último elemento de la lista o NULL si la lista se
  * encuentra vacía.
  */
@@ -210,7 +210,7 @@ void* lista_ultimo(lista_t* lista){
 	return lista->nodo_ultimo->elemento;
 }
 
-/* 
+/*
  * Devuelve true si la lista está vacía o false en caso contrario.
  */
 bool lista_vacia(lista_t* lista){
@@ -225,7 +225,7 @@ bool lista_vacia(lista_t* lista){
  */
 size_t lista_elementos(lista_t* lista){
 	if(lista==NULL){
-		return (size_t)NO_EXISTE;
+		return (size_t)NO_EXISTE_L;
 	}
 	return lista->cantidad;
 }
@@ -311,7 +311,7 @@ void lista_iterador_destruir(lista_iterador_t* iterador){
  * elemento de la misma.
  */
 void lista_con_cada_elemento(lista_t* lista, void (*funcion)(void*)){
-	if(lista==NULL){
+	if(lista==NULL || funcion==NULL){
 		return;
 	}
 	nodo_t* iterador=lista->nodo_primero;
