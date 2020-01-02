@@ -9,4 +9,4 @@ Orden en que fueron hechos los trabajos a lo largo de la cursada:
     5)TDA ABB  
     6)TDA Hash  
     7)TP2  
-    8)~~TDA Grafo~~ TPcito
+    8)~~TDA Grafo~~ TPcito (TDA Heap)
