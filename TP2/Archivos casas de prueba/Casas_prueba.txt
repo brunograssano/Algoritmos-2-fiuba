@@ -1,0 +1,58 @@
+C;Casa sin nacimientos;5;0
+I;Persona 1;5
+I;Persona 2;25
+I;Persona 3;10
+I;Persona 4;50
+C;Casa con nacimiento1 muerte59;59;1
+I;Persona 1;0
+C;Casa muere en 1 anio;5;0
+I;Persona 1;61
+I;Persona 2;60
+I;Persona 3;59
+I;Persona 4;58
+I;Persona 5;57
+I;Persona 6;56
+I;Persona 7;55
+C;Casa donde mueren en 10 anios;1;0
+I;Persona 1;50
+I;Persona 2;50
+I;Persona 3;50
+I;Persona 4;50
+I;Persona 5;50
+I;Persona 6;50
+C;Casa sin muertes y nacimientos;0;0
+I;Persona 1;10
+I;Persona 2;50
+I;Persona 3;59
+C;Casa en 5 anios desaparecen (van de a 1);1;0
+I;Persona 1;55
+I;Persona 2;56
+I;Persona 3;57
+I;Persona 4;58
+I;Persona 5;59
+C;Casa factor nacim3 muert10;10;3
+I;Persona 1;49
+I;Persona 2;39
+I;Persona 3;29
+C;Casa ganadora inicial;1;20
+I;Persona 1;30
+I;Persona 2;30
+I;Persona 3;30
+I;Persona 4;30
+I;Persona 5;30
+I;Persona 6;30
+I;Persona 7;30
+I;Persona 8;30
+I;Persona 9;30
+I;Persona 10;30
+I;Persona 11;30
+I;Persona 12;30
+I;Persona 13;30
+I;Persona 14;30
+I;Persona 15;30
+I;Persona 16;30
+I;Persona 17;30
+I;Persona 18;30
+I;Persona 19;30
+I;Persona 20;30
+
