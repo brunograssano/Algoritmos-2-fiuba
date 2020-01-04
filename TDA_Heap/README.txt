@@ -1,6 +1,5 @@
 TDA HEAP BINARIO (Tpcito)
-* Se entrega la implementacion del TDA Heap junto con la primitiva heapsort. Se incluyen tambien ejemplos de uso del heap, un makefile
-  y la biblioteca del assert utilizado en las pruebas.
+* Se entrega la implementacion del TDA Heap junto con la primitiva heapsort. Se incluyen tambien ejemplos de uso del heap, un makefile y la biblioteca del assert utilizado en las pruebas.
 * Este TDA esta implementado con un vector dinamico. Para crearlo es necesario pasarle una cantidad minima inicial que estime el usuario que lo va a utilizar.
   Una vez alcanzada dicha cantidad, el vector se expande al doble (si puede tomar la memoria).
   En caso de ir vaciando el heap, ocurrira la contrario, el vector se achicara una vez que ocupe menos que la mitad de su tamanio maximo actual.
