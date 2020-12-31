@@ -5,7 +5,7 @@ El árbol requiere para su correcto funcionamiento que se le pase un destructor 
 
 Si se insertan correctamente los elementos en el árbol, su complejidad será O(logn). En caso de que se inserten o eliminen elementos que causen que se deforme, su complejidad tiende a O(n). 
 
-##COMPILACION:
+## COMPILACION:
 * Para realizar la compilación se recomienda utilizar el makefile.
 
 * La línea completa seria (junta todo en el mismo .o):
