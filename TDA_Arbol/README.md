@@ -13,25 +13,25 @@ Separar antes el mini_pruebas.c, así no hay conflictos, ya que habría 2 main
 gcc *.c -o pruebas_arbol -g -std=c99 -Wall -Wconversion -Wtype-limits -pedantic -Werror -o0
 
 ### MAKEFILE:
-* make lista
+* ```make lista```
 	Compila solamente el arbol.c y arbol.h, juntandolos en arbol.o, este utiliza todos los flags ya puestos en COMPILACION.
 
-* make pruebas
+* ```make pruebas```
 	Agarra el arbol.o, crea el mi_assert.o y compila también las pruebas. De este modo queda el archivo pruebas_arbol
 
-* make minipruebas
+* ```make minipruebas```
 	Agarra el arbol.o y compila las mini pruebas que entrego la cátedra para probar un caso feliz.
 
-* make all
+* ```make all```
 	Realiza make pruebas
 
-* make valgrind
+* ```make valgrind```
 	Ejecuta las pruebas
 
-* make valgrind_minipruebas
+* ```make valgrind_minipruebas```
 	Ejecuta las mini pruebas provistas por la cátedra
 
-* make clean
+* ```make clean```
 	Limpia el directorio, sacando los -o y pruebas_arbol
 
 ## EJECUCION:
