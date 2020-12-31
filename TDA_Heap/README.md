@@ -1,4 +1,4 @@
-TDA HEAP BINARIO (Tpcito)
+# TDA HEAP BINARIO (Tpcito)
 * Se entrega la implementacion del TDA Heap junto con la primitiva heapsort. Se incluyen tambien ejemplos de uso del heap,
 un makefile y la biblioteca del assert utilizado en las pruebas.
 * Este TDA esta implementado con un vector dinamico. Para crearlo es necesario pasarle una cantidad minima inicial que estime el usuario que lo va a utilizar.
@@ -11,31 +11,33 @@ un makefile y la biblioteca del assert utilizado en las pruebas.
 * Este heap puede ser utilizado tanto como maximal(1) o minimal(-1). Si se desea utilizar la primitiva de heapsort,
   tambien se le debe de indicar que tipo de orden se quiere.
 
-COMPILACION:
+## COMPILACION:
 *Para realizar la compilacion se recomienda utilizar el makefile.
 
-MAKEFILE:
-*make heap
+###MAKEFILE:
+* ```make heap```
 	Compila el heap.c y heap.h
 
-*make pruebas
+* ```make pruebas```
 	Compila los dos ejemplos y el assert, dejandolos listos para su ejecucion.
 
-*make valgrind
+* ```make valgrind```
 	Ejecuta los dos ejemplos
 
-*make clean
+* ```make clean```
 	Limpia el directorio sacando los -o
 
-EJECUCION:
-*Se pueden ejecutar los ejemplos mediante las siguientes opciones
+## EJECUCION:
+* Se pueden ejecutar los ejemplos mediante las siguientes opciones
 	1) ./ejemplo1 o ./ejemplo2 (No mostraria informacion detallada sobre el uso de la memoria)
 	2) valgrind --leak-check=full --track-origins=yes --show-reachable=yes ./ejemplo1 || ./ejemplo2
 	3) make valgrind
 
-PRUEBAS:
+## PRUEBAS:
   * En el ejemplo1.c se incluyen ejemplos basicos sobre el uso de las primitivas del heap.
   Se evalua el comportamiento del heap con enteros y caracteres. Ademas se incluyen pruebas sobre los casos nulos que puede
   llegar a tener el heap y de este en unas pruebas de volumen.
   * En el ejemplo2.c se guardan en un heap maximal autos. Estos autos estan en memoria y son comparados con su precio.
   Se observa que funcione correctamente el heap en este caso.
+
+![heap](https://media.geeksforgeeks.org/wp-content/cdn-uploads/binaryheap.png "heap")
