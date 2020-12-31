@@ -12,9 +12,9 @@ un makefile y la biblioteca del assert utilizado en las pruebas.
   tambien se le debe de indicar que tipo de orden se quiere.
 
 ## COMPILACION:
-*Para realizar la compilacion se recomienda utilizar el makefile.
+* Para realizar la compilacion se recomienda utilizar el makefile.
 
-###MAKEFILE:
+### MAKEFILE:
 * ```make heap```
 	Compila el heap.c y heap.h
 
