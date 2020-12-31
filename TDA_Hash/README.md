@@ -12,7 +12,7 @@
 Separar antes el mini_pruebas.c, asi no hay conflictos, ya que habria 2 main
 gcc *.c -o pruebas_hash -g -std=c99 -Wall -Wconversion -Wtype-limits -pedantic -Werror -o0
 
-###MAKEFILE:
+### MAKEFILE:
 * ```make hash```
 	Compila el hash.c y hash.h, y los archivos de árbol y lista necesarios, a cada uno, lo deja con su respectivo .o, este utiliza todos los flags ya puestos en COMPILACION.
 
